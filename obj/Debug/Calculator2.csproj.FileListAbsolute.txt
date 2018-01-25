@@ -1,0 +1,10 @@
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\bin\Debug\Calculator2.exe.config
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\bin\Debug\Calculator2.exe
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\bin\Debug\Calculator2.pdb
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.csprojResolveAssemblyReference.cache
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.Form1.resources
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.Properties.Resources.resources
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.csproj.GenerateResource.Cache
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.csproj.CoreCompileInputs.cache
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.exe
+F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.pdb
