@@ -54,6 +54,7 @@
             // 
             this.txtOut.Location = new System.Drawing.Point(13, 13);
             this.txtOut.Name = "txtOut";
+            this.txtOut.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtOut.Size = new System.Drawing.Size(210, 20);
             this.txtOut.TabIndex = 0;
             // 

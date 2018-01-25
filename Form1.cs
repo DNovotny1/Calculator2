@@ -80,11 +80,16 @@ namespace Calculator2
         //changes sign and checks for zeros
         private void btnSign_Click(object sender, EventArgs e)
         {
-            
-            double sig = System.Convert.ToDouble(txtOut.Text);
-            txtOut.Clear();
-            txtOut.AppendText(System.Convert.ToString(sig * (-1)));
-            
+            if ((System.Convert.ToString(txtOut.Text)).Contains("."))
+            {
+                
+            }
+            else
+            {
+                double sig = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
+                txtOut.AppendText(System.Convert.ToString(sig * (-1)));
+            }
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -132,10 +137,28 @@ namespace Calculator2
             if (oper == "add")
             {
                 second = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
                 txtOut.AppendText(System.Convert.ToString(first + second));
             }
-                
-                
+            if (oper == "min")
+            {
+                second = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
+                txtOut.AppendText(System.Convert.ToString(first - second));
+            }
+            if (oper == "mul")
+            {
+                second = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
+                txtOut.AppendText(System.Convert.ToString(first * second));
+            }
+            if (oper == "div")
+            {
+                second = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
+                txtOut.AppendText(System.Convert.ToString((first / second) +(first % second)));
+            }
+
 
 
 
