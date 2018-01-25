@@ -19,7 +19,11 @@ namespace Calculator2
         //first stores original number after operator is chosen, oper stores opperator type
         double first;
         double second;
+        double sign;
         string oper = "nul";
+        string dotCheck;
+        string dot = ".";
+        
 
         //10 sets to input digits to calc
         private void btn0_Click(object sender, EventArgs e)
@@ -72,26 +76,34 @@ namespace Calculator2
             txtOut.AppendText("9");
         }
 
+        //adds . if not one present
         private void btnDot_Click(object sender, EventArgs e)
         {
-            txtOut.AppendText(".");
-        }
+            dotCheck = System.Convert.ToString(txtOut.Text);
 
-        //changes sign and checks for zeros
-        private void btnSign_Click(object sender, EventArgs e)
-        {
-            if ((System.Convert.ToString(txtOut.Text)).Contains("."))
+            if (dotCheck.Contains(dot))
             {
-                
+
             }
             else
             {
-                double sig = System.Convert.ToDouble(txtOut.Text);
-                txtOut.Clear();
-                txtOut.AppendText(System.Convert.ToString(sig * (-1)));
+                txtOut.AppendText(".");
             }
         }
 
+        //changes sign 
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+            if (txtOut.Text != "")
+            {
+                sign = System.Convert.ToDouble(txtOut.Text);
+                txtOut.Clear();
+                sign = (sign) * -1;
+                txtOut.AppendText(System.Convert.ToString(sign));
+            }
+            
+        }
+        //sets oper to opperator for whichever of the 4 buttons is chosen 
         private void btnPlus_Click(object sender, EventArgs e)
         {
             first = System.Convert.ToDouble(txtOut.Text);
@@ -110,7 +122,7 @@ namespace Calculator2
         {
             first = System.Convert.ToDouble(txtOut.Text);
             txtOut.Clear();
-            oper = "mul";
+            oper = "mult";
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -120,18 +132,20 @@ namespace Calculator2
             oper = "div";
         }
 
+        // clears line and resets variable
         private void btnC_Click(object sender, EventArgs e)
-        {
-            txtOut.Clear();
-        }
-
-        private void btnCE_Click(object sender, EventArgs e)
         {
             txtOut.Clear();
             oper = "nul";
             first = 0;
         }
+        // clears line
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            txtOut.Clear();
+        }
 
+        //enter button, checks opperator 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             if (oper == "add")
@@ -146,17 +160,25 @@ namespace Calculator2
                 txtOut.Clear();
                 txtOut.AppendText(System.Convert.ToString(first - second));
             }
-            if (oper == "mul")
+            if (oper == "mult")
             {
                 second = System.Convert.ToDouble(txtOut.Text);
-                txtOut.Clear();
+                txtOut.Clear();               
                 txtOut.AppendText(System.Convert.ToString(first * second));
             }
             if (oper == "div")
             {
                 second = System.Convert.ToDouble(txtOut.Text);
                 txtOut.Clear();
-                txtOut.AppendText(System.Convert.ToString((first / second) +(first % second)));
+                //checks for divide by zero
+                if (second != 0)
+                {
+                    txtOut.AppendText(System.Convert.ToString((first / second) + (first % second)));
+                }
+                else
+                {
+                    txtOut.AppendText("Illegal Operation, Press C");
+                }
             }
 
 
