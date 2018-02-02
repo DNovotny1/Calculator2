@@ -52,6 +52,7 @@
             // 
             // txtOut
             // 
+            this.txtOut.Enabled = false;
             this.txtOut.Location = new System.Drawing.Point(13, 13);
             this.txtOut.Name = "txtOut";
             this.txtOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -61,6 +62,7 @@
             // 
             // btn7
             // 
+            this.btn7.Enabled = false;
             this.btn7.Location = new System.Drawing.Point(12, 40);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(37, 40);
@@ -274,8 +276,10 @@
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.txtOut);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

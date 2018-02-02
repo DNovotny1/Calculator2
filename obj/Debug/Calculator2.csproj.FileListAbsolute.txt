@@ -8,3 +8,12 @@ F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.csp
 F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.csproj.CoreCompileInputs.cache
 F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.exe
 F:\Google Drive\spring2018\C#2\Calculator2\Calculator2\obj\Debug\Calculator2.pdb
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\bin\Debug\Calculator2.exe.config
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.exe
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.pdb
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\bin\Debug\Calculator2.exe
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\bin\Debug\Calculator2.pdb
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.csprojResolveAssemblyReference.cache
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.Form1.resources
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.Properties.Resources.resources
+C:\Users\svc_OKC_BT204\Documents\projects\Calculator2\obj\Debug\Calculator2.csproj.GenerateResource.Cache

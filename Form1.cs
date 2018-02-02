@@ -17,9 +17,9 @@ namespace Calculator2
             InitializeComponent();
         }
         //first stores original number after operator is chosen, oper stores opperator type
-        double first;
-        double second;
-        double sign;
+        decimal first;
+        decimal second;
+        decimal sign;
         string oper = "nul";
         string dotCheck;
         string dot = ".";
@@ -96,7 +96,7 @@ namespace Calculator2
         {
             if (txtOut.Text != "")
             {
-                sign = System.Convert.ToDouble(txtOut.Text);
+                sign = System.Convert.ToDecimal(txtOut.Text);
                 txtOut.Clear();
                 sign = (sign) * -1;
                 txtOut.AppendText(System.Convert.ToString(sign));
@@ -106,28 +106,28 @@ namespace Calculator2
         //sets oper to opperator for whichever of the 4 buttons is chosen 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            first = System.Convert.ToDouble(txtOut.Text);
+            first = System.Convert.ToDecimal(txtOut.Text);
             txtOut.Clear();
             oper = "add";
         }
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            first = System.Convert.ToDouble(txtOut.Text);
+            first = System.Convert.ToDecimal(txtOut.Text);
             txtOut.Clear();
             oper = "min";
         }
 
         private void btnMulti_Click(object sender, EventArgs e)
         {
-            first = System.Convert.ToDouble(txtOut.Text);
+            first = System.Convert.ToDecimal(txtOut.Text);
             txtOut.Clear();
             oper = "mult";
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            first = System.Convert.ToDouble(txtOut.Text);
+            first = System.Convert.ToDecimal(txtOut.Text);
             txtOut.Clear();
             oper = "div";
         }
@@ -150,25 +150,25 @@ namespace Calculator2
         {
             if (oper == "add")
             {
-                second = System.Convert.ToDouble(txtOut.Text);
+                second = System.Convert.ToDecimal(txtOut.Text);
                 txtOut.Clear();
                 txtOut.AppendText(System.Convert.ToString(first + second));
             }
             if (oper == "min")
             {
-                second = System.Convert.ToDouble(txtOut.Text);
+                second = System.Convert.ToDecimal(txtOut.Text);
                 txtOut.Clear();
                 txtOut.AppendText(System.Convert.ToString(first - second));
             }
             if (oper == "mult")
             {
-                second = System.Convert.ToDouble(txtOut.Text);
+                second = System.Convert.ToDecimal(txtOut.Text);
                 txtOut.Clear();               
                 txtOut.AppendText(System.Convert.ToString(first * second));
             }
             if (oper == "div")
             {
-                second = System.Convert.ToDouble(txtOut.Text);
+                second = System.Convert.ToDecimal(txtOut.Text);
                 txtOut.Clear();
                 //checks for divide by zero
                 if (second != 0)
@@ -185,6 +185,59 @@ namespace Calculator2
 
 
 
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1)
+            {
+                btn1.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad0 || e.KeyCode == Keys.D0)
+            {
+                btn0.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad2 || e.KeyCode == Keys.D2)
+            {
+                btn2.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad3 || e.KeyCode == Keys.D3)
+            {
+                btn3.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad4 || e.KeyCode == Keys.D4)
+            {
+                btn4.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad5 || e.KeyCode == Keys.D5)
+            {
+                btn5.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad6 || e.KeyCode == Keys.D6)
+            {
+                btn6.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad7 || e.KeyCode == Keys.D7)
+            {
+                btn7.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad8 || e.KeyCode == Keys.D8)
+            {
+                btn8.PerformClick();
+            }
+            else if (e.KeyCode == Keys.NumPad9 || e.KeyCode == Keys.D9)
+            {
+                btn9.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                btnEqual.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Add)
+            {
+                btnPlus.PerformClick();
+            }
 
         }
     }
